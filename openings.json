@@ -1,0 +1,80 @@
+[{
+    "fen": "rnbqkbnr/pppp2pp/8/4pp2/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 3",
+    "bestmove": "f3e5",
+    "tags": ["latvian"]
+},
+{
+    "fen": "r1bqkbnr/pppp2pp/2n5/4Np2/4P3/8/PPPP1PPP/RNBQKB1R w KQkq - 1 4",
+    "bestmove": "d2d4",
+    "tags": ["latvian"]
+},
+{
+    "fen": "rnb1kbnr/pppp2pp/5q2/4Np2/4P3/8/PPPP1PPP/RNBQKB1R w KQkq - 1 4",
+    "bestmove": "d2d4",
+    "tags": ["latvian"]
+},
+{
+    "fen": "rnb1kbnr/ppp3pp/3p1q2/4Np2/3PP3/8/PPP2PPP/RNBQKB1R w KQkq - 0 5",
+    "bestmove": "e5c4",
+    "tags": ["latvian"]
+},
+{
+    "fen": "r1bqkbnr/pppn1ppp/3p4/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 1 4",
+    "bestmove": "f1c4",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bqk1nr/pppnbppp/3p4/4p3/2BPP3/5N2/PPP2PPP/RNBQK2R w KQkq - 3 5",
+    "bestmove": "d4e5",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bqk1nr/pppnbppp/8/4p3/2B1P3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 6",
+    "bestmove": "d1d5",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bqk1nr/ppp1bppp/3p4/4n3/2B1P3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 6",
+    "bestmove": "f3e5",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bqk1nr/ppp1bppp/8/4p3/2B1P3/8/PPP2PPP/RNBQK2R w KQkq - 0 7",
+    "bestmove": "d1h5",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bqkbnr/ppp2pp1/3p3p/4n3/2B1P3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 6",
+    "bestmove": "f3e5",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bqkbnr/ppp2pp1/7p/4p3/2B1P3/8/PPP2PPP/RNBQK2R w KQkq - 0 7",
+    "bestmove": "c4f7",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bqkbnr/pppn1pp1/7p/4p3/2B1P3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 6",
+    "bestmove": "c4f7",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bq1bnr/pppn2p1/5k1p/4N3/4P3/8/PPP2PPP/RNBQK2R w KQ - 1 8",
+    "bestmove": "b1c3",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bqkbnr/pppn1ppp/3p4/8/2BpP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 5",
+    "bestmove": "d1d4",
+    "tags": ["philidor", "dubious"]
+}]
+
+
+
+
+
+
+
+
+
+
