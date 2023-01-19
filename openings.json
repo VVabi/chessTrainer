@@ -67,7 +67,85 @@
     "fen": "r1bqkbnr/pppn1ppp/3p4/8/2BpP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 5",
     "bestmove": "d1d4",
     "tags": ["philidor", "dubious"]
-}]
+},
+{
+    "fen": "r1bqkb1r/pppn1ppp/3p1n2/4p3/2BPP3/5N2/PPP2PPP/RNBQK2R w KQkq - 3 5",
+    "bestmove": "d4e5",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bqkb1r/ppp2ppp/3p1n2/4n3/2B1P3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 6",
+    "bestmove": "f3e5",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bqkb1r/ppp2ppp/5n2/4p3/2B1P3/8/PPP2PPP/RNBQK2R w KQkq - 0 7",
+    "bestmove": "c4f7",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bQ3r/ppp2kpp/5n2/4p3/1b2P3/8/PPP2PPP/RNB1K2R w KQ - 1 9",
+    "bestmove": "d8d2",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bqkbnr/pp1n1ppp/2pp4/4p3/2BPP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 5",
+    "bestmove": "e1g1",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bqk1nr/pp1nbppp/2pp4/4p3/2BPP3/5N2/PPP2PPP/RNBQ1RK1 w kq - 2 6",
+    "bestmove": "d4e5",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bqk1nr/pp1nbppp/2p5/4p3/2B1P3/5N2/PPP2PPP/RNBQ1RK1 w kq - 0 7",
+    "bestmove": "f3g5",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bqk2r/pp1nbppp/2p4n/4p1N1/2B1P3/8/PPP2PPP/RNBQ1RK1 w kq - 2 8",
+    "bestmove": "g5e6",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "rnbqkb1r/ppp2ppp/3p4/4P3/4n3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 5",
+    "bestmove": "d1d5",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "rnbqkbnr/ppp3pp/3p4/4pp2/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4",
+    "bestmove": "f1c4",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "rn1qkbnr/ppp2ppp/3p4/4p3/3PP1b1/5N2/PPP2PPP/RNBQKB1R w KQkq - 1 4",
+    "bestmove": "d4e5",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "rn1qkbnr/ppp2ppp/8/4p3/4P3/5Q2/PPP2PPP/RNB1KB1R w KQkq - 0 6",
+    "bestmove": "f1c4",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "rn2kbnr/ppp2ppp/5q2/4p3/2B1P3/5Q2/PPP2PPP/RNB1K2R w KQkq - 2 7",
+    "bestmove": "f3b3",
+    "tags": ["philidor", "dubious"]
+},
+{
+    "fen": "r1bqkbnr/ppp2ppp/2np4/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 1 4",
+    "bestmove": "b1c3",
+    "tags": ["philidor", "dubious"]
+}
+]
+
+
+
+
+
+
+
 
 
 

@@ -138,10 +138,13 @@ class ChessExerciseManager():
         self.chess_canvas .pack()
         self.exercises = exercise_list
         self.chess_canvas .register_listener(self)
+        self.index = len(self.exercises)-1
         self.start_new_exercise()
+        
 
     def start_new_exercise(self):
-        self.exercise = ChessExercise(random.choice(self.exercises))
+        self.exercise = ChessExercise(self.exercises[self.index]) #ChessExercise(random.choice(self.exercises))
+        self.index = self.index-1
         self.chess_canvas.set_new_board(chess.Board(self.exercise.get_fen()))
 
     def handle(self, source, target):
