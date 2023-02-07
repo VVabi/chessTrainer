@@ -1,12 +1,12 @@
 import chess
 import chess.svg
-
+import chess.pgn
 from PIL import Image, ImageTk
 import tkinter as tk
 import math
 import random
 import json
-
+import glob
 field_size = 100
 
 def field_coordinates_to_index(x, y, white_to_move):
@@ -74,14 +74,16 @@ class ChessCanvas(tk.Canvas):
             self.white_bottom = False
         self.draw()
 
-    def draw(self):
-         for horz_idx in range(8):
+    def draw(self, idx = None):
+        for horz_idx in range(8):
             for vert_idx in range(8):
                 color = "gray"
                 if ((horz_idx+vert_idx) % 2) == 0:
                     color = "white"
                 field_index = field_coordinates_to_index(horz_idx, vert_idx, self.white_bottom)
 
+                if idx is not None and idx != field_index:
+                    continue
                 if  self.clicked_index == field_index:
                     color = "green"
 
@@ -95,27 +97,29 @@ class ChessCanvas(tk.Canvas):
 
                     if piece in self.ims:
                         self.create_image(field_size*horz_idx, field_size*vert_idx, image=self.ims[piece], anchor="nw")
+    
+
+            
 
     def click_callback(self, event):
         x = math.floor(event.x/self.field_size)
         y = math.floor(event.y/self.field_size)
 
         index = field_coordinates_to_index(x, y, self.white_bottom)
-        rank = math.floor(index/8)
-        file = index % 8
-        
+
         if self.clicked_index != index and self.clicked_index > -1:
             prev_index = self.clicked_index
             self.clicked_index = -1
             for listener in self.event_listeners:
                 listener.handle(prev_index, index)
+            self.draw(prev_index)
         else:
             if index == self.clicked_index:
                 self.clicked_index = -1
             else:
                 self.clicked_index = index
 
-        self.draw()
+            self.draw(index)
 
     def register_listener(self, listener):
         self.event_listeners.append(listener)
@@ -131,6 +135,36 @@ class ChessExercise():
     def get_fen(self):
         return self.fen
 
+class PgnExercise():
+    def __init__(self, path):
+        self.path = path
+        with open(self.path) as pgn:
+            self.game = chess.pgn.read_game(pgn)
+        self.index = 0
+        self.moves = [str(move) for move in self.game.mainline_moves()]
+
+    def check_move(self, move):
+        ret = self.moves[self.index] == move
+        if ret:
+            self.index =         self.index +2
+        return ret
+    
+    def check_success(self):
+        return self.index > len(self.moves)
+
+    def get_fen(self):
+        with open(self.path) as pgn:
+            self.game = chess.pgn.read_game(pgn)
+        board = self.game.board()
+        idx = 0
+        for move  in self.game.mainline_moves():
+            if idx >= self.index:
+                break
+            idx = idx+1
+            board.push(move)
+        
+        return board.fen()
+
 class ChessExerciseManager():
     def __init__(self, root, exercise_list):
         self.chess_canvas = ChessCanvas(root, field_size, None)
@@ -143,8 +177,8 @@ class ChessExerciseManager():
         
 
     def start_new_exercise(self):
-        self.exercise = ChessExercise(self.exercises[self.index]) #ChessExercise(random.choice(self.exercises))
-        self.index = self.index-1
+        self.exercise = PgnExercise(random.choice(self.exercises))  #ChessExercise(self.exercises[self.index]) 
+        #self.index = self.index-1
         self.chess_canvas.set_new_board(chess.Board(self.exercise.get_fen()))
 
     def handle(self, source, target):
@@ -158,15 +192,17 @@ class ChessExerciseManager():
 
         if self.exercise.check_move(move):
             print("SUCCESS")
+            self.chess_canvas.set_new_board(chess.Board(self.exercise.get_fen()))
             #self.chess_canvas.push_move(move)
-            self.start_new_exercise()
+            if self.exercise.check_success():
+                print("FINISHED EXERCISE")
+                self.start_new_exercise()
         else:
             print("FAILURE")
 
 root = tk.Tk()
 
-with open("openings.json") as fh:
-    exercise_list = json.load(fh)
+exercise_list = glob.glob("pgn/**/*.pgn", recursive=True)
 
 manager = ChessExerciseManager(root, exercise_list)
 
