@@ -202,7 +202,7 @@ class ChessExerciseManager():
 
 root = tk.Tk()
 
-exercise_list = glob.glob("pgn/**/*.pgn", recursive=True)
+exercise_list = glob.glob("pgn/**/*.pgn", recursive=True) #["pgn/white/philidor/mainline_2.pgn"] #
 
 manager = ChessExerciseManager(root, exercise_list)
 
