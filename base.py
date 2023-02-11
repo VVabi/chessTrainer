@@ -75,6 +75,9 @@ class ChessCanvas(tk.Canvas):
         self.draw()
 
     def draw(self, idx = None):
+        if idx is None:
+            self.delete("all")
+
         for horz_idx in range(8):
             for vert_idx in range(8):
                 color = "gray"
@@ -202,7 +205,7 @@ class ChessExerciseManager():
 
 root = tk.Tk()
 
-exercise_list = glob.glob("pgn/**/*.pgn", recursive=True) #["pgn/white/philidor/mainline_2.pgn"] #
+exercise_list = ["pgn/white/three_knights/Bc5_2.pgn"] # glob.glob("pgn/**/*.pgn", recursive=True) # #glob.glob("pgn/**/*.pgn", recursive=True) #
 
 manager = ChessExerciseManager(root, exercise_list)
 
