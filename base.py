@@ -205,7 +205,7 @@ class ChessExerciseManager():
 
 root = tk.Tk()
 
-exercise_list = ["pgn/white/three_knights/Bc5_2.pgn"] # glob.glob("pgn/**/*.pgn", recursive=True) # #glob.glob("pgn/**/*.pgn", recursive=True) #
+exercise_list = ["pgn/white/four_knights/other/4Bb4_crazy.pgn"] # glob.glob("pgn/**/*.pgn", recursive=True) # #glob.glob("pgn/**/*.pgn", recursive=True) #
 
 manager = ChessExerciseManager(root, exercise_list)
 
